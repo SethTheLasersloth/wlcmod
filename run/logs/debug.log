@@ -1,0 +1,26 @@
+[14:33:30] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.14.22
+[14:33:31] [main/DEBUG] (FabricLoader/GamePatch) Found game constructor: net.minecraft.client.main.Main -> net.minecraft.client.MinecraftClient
+[14:33:31] [main/DEBUG] (FabricLoader/GamePatch) Patching game constructor <init>(Lnet/minecraft/client/RunArgs;)V
+[14:33:31] [main/DEBUG] (FabricLoader/GamePatch) Run directory field is thought to be net/minecraft/client/MinecraftClient/runDirectory
+[14:33:31] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/client/ClientBrandRetriever::getClientModName
+[14:33:31] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/server/MinecraftServer::getServerModName
+[14:33:31] [main/DEBUG] (FabricLoader/GamePatch) Patched 3 classs
+[14:33:31] [main/DEBUG] (FabricLoader/Discovery) Mod discovery time: 50.8 ms
+[14:33:31] [main/WARN] (FabricLoader/Resolution) Mod resolution failed
+[14:33:31] [main/INFO] (FabricLoader/Resolution) Immediate reason: [HARD_DEP_NO_CANDIDATE fabric-api 0.92.3+1.20.1 {depends fabricloader @ [>=0.15.6]}, ROOT_FORCELOAD_SINGLE fabric-api 0.92.3+1.20.1]
+[14:33:31] [main/INFO] (FabricLoader/Resolution) Reason: [HARD_DEP fabric-api 0.92.3+1.20.1 {depends fabricloader @ [>=0.15.6]}, HARD_DEP fabric-data-attachment-api-v1 1.0.1+de0fd6d177 {depends fabricloader @ [>=0.15.1]}, HARD_DEP fabric-entity-events-v1 1.6.0+1c78457f77 {depends fabricloader @ [>=0.15.6]}]
+[14:33:31] [main/INFO] (FabricLoader/Resolution) Fix: add [], remove [], replace [[fabricloader 0.14.22] -> add:fabricloader 0.15.6 ([[0.15.6,?)])]
+[14:33:31] [main/ERROR] (FabricLoader) Incompatible mod set!
+net.fabricmc.loader.impl.FormattedException: Mod resolution encountered an incompatible mod set!
+A potential solution has been determined:
+	 - Replace mod 'Fabric Loader' (fabricloader) 0.14.22 with version 0.15.6 or later.
+Unmet dependency listing:
+	 - Mod 'Fabric API' (fabric-api) 0.92.3+1.20.1 requires version 0.15.6 or later of mod 'Fabric Loader' (fabricloader), but only the wrong version is present: 0.14.22!
+	 - Mod 'Fabric Data Attachment API (v1)' (fabric-data-attachment-api-v1) 1.0.1+de0fd6d177 requires version 0.15.1 or later of mod 'Fabric Loader' (fabricloader), but only the wrong version is present: 0.14.22!
+	 - Mod 'Fabric Entity Events (v1)' (fabric-entity-events-v1) 1.6.0+1c78457f77 requires version 0.15.6 or later of mod 'Fabric Loader' (fabricloader), but only the wrong version is present: 0.14.22!
+	at net.fabricmc.loader.impl.FormattedException.ofLocalized(FormattedException.java:51) ~[fabric-loader-0.14.22.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:192) ~[fabric-loader-0.14.22.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:148) ~[fabric-loader-0.14.22.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:68) ~[fabric-loader-0.14.22.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.14.22.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[?:?]

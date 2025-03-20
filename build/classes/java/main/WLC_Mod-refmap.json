@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/lasertest/wlcmod/mixin/KeyboardInputMixin": {
+      "tick": "Lnet/minecraft/class_743;method_3129(ZF)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/lasertest/wlcmod/mixin/KeyboardInputMixin": {
+        "tick": "Lnet/minecraft/class_743;method_3129(ZF)V"
+      }
+    }
+  }
+}
