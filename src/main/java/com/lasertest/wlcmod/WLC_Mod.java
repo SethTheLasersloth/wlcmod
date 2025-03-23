@@ -35,6 +35,13 @@ import java.nio.charset.StandardCharsets;
 //?}
 
 public class WLC_Mod implements ModInitializer {
+
+    public static short mcVersion = 12001; // 1.20.1 - 1.20.4
+//    public static short mcVersion = 12101; // 1.21.1
+//    public static short mcVersion = 12102; // 1.21.2 - 1.21.3
+//    public static short mcVersion = 12104; // 1.21.4
+
+
     public static int lockTicks = 0;
     public static void setLockTicks(int newLockTicks) { lockTicks = newLockTicks; }
 
@@ -74,8 +81,6 @@ public class WLC_Mod implements ModInitializer {
 //    public record BytePayload(ByteBuf data) implements CustomPayload {
 //        public static final PacketCodec<PacketByteBuf, BytePayload> CODEC = CustomPayload.codecOf(BytePayload::write, BytePayload::new);
 //        public static final Id<BytePayload> ID = new Id<>(wlcmodChannel);
-////        public static final Id<BytePayload> ID2 = new Id<>(wlcmod2Channel);
-////        public static final Id<BytePayload> ID3 = new Id<>(wlcmod3Channel);
 //
 //        public BytePayload(PacketByteBuf buf) {
 //            this(buf.copy());
@@ -95,9 +100,7 @@ public class WLC_Mod implements ModInitializer {
 //
 //    public record BytePayload2(ByteBuf data) implements CustomPayload {
 //        public static final PacketCodec<PacketByteBuf, BytePayload2> CODEC = CustomPayload.codecOf(BytePayload2::write, BytePayload2::new);
-////        public static final CustomPayload.Id<BytePayload> ID = new CustomPayload.Id<>(wlcmodChannel);
 //        public static final CustomPayload.Id<BytePayload2> ID2 = new CustomPayload.Id<>(wlcmod2Channel);
-////        public static final CustomPayload.Id<BytePayload> ID3 = new CustomPayload.Id<>(wlcmod3Channel);
 //
 //        public BytePayload2(PacketByteBuf buf) {
 //            this(buf.copy());
@@ -116,8 +119,6 @@ public class WLC_Mod implements ModInitializer {
 //
 //    public record BytePayload3(ByteBuf data) implements CustomPayload {
 //        public static final PacketCodec<PacketByteBuf, BytePayload3> CODEC = CustomPayload.codecOf(BytePayload3::write, BytePayload3::new);
-////        public static final CustomPayload.Id<BytePayload> ID = new CustomPayload.Id<>(wlcmodChannel);
-////        public static final CustomPayload.Id<BytePayload> ID2 = new CustomPayload.Id<>(wlcmod2Channel);
 //        public static final CustomPayload.Id<BytePayload3> ID3 = new CustomPayload.Id<>(wlcmod3Channel);
 //
 //        public BytePayload3(PacketByteBuf buf) {

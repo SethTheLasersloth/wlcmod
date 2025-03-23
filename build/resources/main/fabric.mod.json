@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "wlcmod",
-  "version": "1.0-SNAPSHOT",
+  "version": "1.0.2--1.20.1-1.20.4",
   "name": "WLC_Mod",
   "description": "A mod that fixes some issues on WLC thus allowing players to get OneBoat Completions!",
   "authors": ["The_Lasersloth"],
   "contributors": ["BillBodkins","Makkuusen"],
   "contact": {
-    "repo": "https://github.com/smiu2/WLC_Mod"
+    "repo": "https://github.com/SethTheLasersloth/wlcmod"
   },
-  "license": "All-Rights-Reserved",
+  "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
@@ -30,7 +30,7 @@
   "depends": {
     "fabricloader": ">=0.14.22",
     "fabric": "*",
-    "minecraft": ">=1.21.1 <=1.21.4"
+    "minecraft": ">=1.20.1 <=1.20.4"
   },
   "mixins": ["wlcmod.mixins.json"]
 }

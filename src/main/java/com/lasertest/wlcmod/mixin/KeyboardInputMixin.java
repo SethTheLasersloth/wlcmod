@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class KeyboardInputMixin {
     @Inject(method = "tick", at = @At("TAIL"))
 
-    // vvvvv this was used for versions before 1.21.4, but I just tried the other one on 1.21.2 and it works, so....
+    // vvvvv this was used for versions before 1,21,4, but I just tried the other one on 1,21,2 and it works, so....
 //    public void tick(boolean slowDown, float slowDownFactor, CallbackInfo ci) {
 
     public void tick(CallbackInfo ci) {

@@ -27,7 +27,8 @@ public class ModPresencePacket {
     public static void register() {
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-            buf.writeBoolean(true); // Just to send some data
+//            buf.writeBoolean(true); // Just to send some data
+            buf.writeShort(WLC_Mod.mcVersion);
 
             //? <=1.20.1 {
                 ClientPlayNetworking.send(MOD_PRESENCE, buf);
