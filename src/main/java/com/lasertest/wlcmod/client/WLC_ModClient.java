@@ -1,19 +1,9 @@
 package com.lasertest.wlcmod.client;
 
-import com.lasertest.wlcmod.WLC_Mod;
 import net.fabricmc.api.ClientModInitializer;
-
-import com.lasertest.wlcmod.network.ModPackets;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
-import net.minecraft.network.PacketByteBuf;
-
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.text.Text;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 
 public class WLC_ModClient implements ClientModInitializer {
-    private static int lockTicks = 0;
-//    public static boolean blockInputs = false;
 
     @Override
     public void onInitializeClient() {
@@ -44,16 +34,6 @@ public class WLC_ModClient implements ClientModInitializer {
 //                }
 //            }
 //        });
-    }
-
-    public static boolean isMovementLocked() {
-        return lockTicks > 0;
-    }
-
-    public static void tick() {
-        if (lockTicks > 0) {
-            lockTicks--;
-        }
     }
 
 //    @Override

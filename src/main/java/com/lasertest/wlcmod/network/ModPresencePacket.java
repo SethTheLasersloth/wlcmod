@@ -22,8 +22,6 @@ import io.netty.buffer.Unpooled;
 // Serverbound
 public class ModPresencePacket {
 
-    public static final Identifier MOD_PRESENCE = Identifier.of("wlcmod3", "mod_presence");
-
     public static void register() {
         ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
             PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
@@ -31,10 +29,10 @@ public class ModPresencePacket {
             buf.writeShort(WLC_Mod.mcVersion);
 
             //? <=1.20.1 {
-                ClientPlayNetworking.send(MOD_PRESENCE, buf);
+                ClientPlayNetworking.send(WLC_Mod.wlcmod3Channel, buf);
             //?}
             //? >=1.21 {
-//                buf.writeIdentifier(MOD_PRESENCE);
+//                buf.writeIdentifier(WLC_Mod.wlcmod3Channel);
 //                WLC_Mod.BytePayload3 payload = new WLC_Mod.BytePayload3(buf);
 //                ClientPlayNetworking.send(payload);
             //?}
@@ -50,23 +48,4 @@ public class ModPresencePacket {
 //        PayloadTypeRegistry.playC2S().register(WLC_Mod.BytePayload3.ID3, WLC_Mod.BytePayload3.CODEC);
          ///?}
     }
-
-
-//    public static void registerHandlers(){
-//        //? <=1.20.1 {
-////        ServerPlayNetworking.registerGlobalReceiver(OpenBoatUtils.settingsChannel, (server, player, handler, buf, responseSender) -> {
-////            handlePacket(buf);
-////        });
-//        //?}
-//        //? >=1.21 {
-//        ServerPlayNetworking.registerGlobalReceiver(WLC_Mod.BytePayload3.ID3, ((payload, context) ->
-//                context.server().execute(() ->
-//                    handlePacket(payload.data()) )));
-//        //?}
-//    }
-//
-//    public static void handlePacket(ByteBuf buf) {
-//
-//    }
-
 }

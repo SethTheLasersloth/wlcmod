@@ -18,9 +18,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class KeyboardInputMixin {
     @Inject(method = "tick", at = @At("TAIL"))
 
-    // vvvvv this was used for versions before 1,21,4, but I just tried the other one on 1,21,2 and it works, so....
-//    public void tick(boolean slowDown, float slowDownFactor, CallbackInfo ci) {
-
     public void tick(CallbackInfo ci) {
         if (WLC_Mod.blockInputs) {
             KeyboardInput thisObject = (KeyboardInput)(Object)this;
@@ -31,7 +28,6 @@ public class KeyboardInputMixin {
             thisObject.pressingLeft = false;
             thisObject.pressingRight = false;
             thisObject.sneaking = false;
-//            thisObject.jumping = false;
             //?}
             //? >=1.21.2 {
 //            thisObject.playerInput = new PlayerInput(false, false, false, false, thisObject.playerInput.jump(), false, thisObject.playerInput.sprint());
